@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D37BDF5FD8DA9A7FD0947056 /* Pods_Dasida.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CA363D9907427C7751348 /* Pods_Dasida.framework */; };
+		F13037C127034F4300627E20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13037C027034F4300627E20 /* AppDelegate.swift */; };
+		F13037C327034F4300627E20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13037C227034F4300627E20 /* SceneDelegate.swift */; };
+		F13037C527034F4300627E20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13037C427034F4300627E20 /* ViewController.swift */; };
+		F13037C827034F4300627E20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13037C627034F4300627E20 /* Main.storyboard */; };
+		F13037CA27034F4600627E20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13037C927034F4600627E20 /* Assets.xcassets */; };
+		F13037CD27034F4600627E20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13037CB27034F4600627E20 /* LaunchScreen.storyboard */; };
+		F13038212705AC1000627E20 /* tableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13038202705AC1000627E20 /* tableViewController.swift */; };
+		F130385C2718463C00627E20 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130385B2718463C00627E20 /* loginViewController.swift */; };
+		F130385F27195C0200627E20 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130385E27195C0200627E20 /* Header.swift */; };
+		F130386127195E9700627E20 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130386027195E9700627E20 /* HTTPClient.swift */; };
+		F13038632719620500627E20 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13038622719620500627E20 /* API.swift */; };
+		F13038662719625D00627E20 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13038652719625D00627E20 /* AuthAPI.swift */; };
+		F1303869271B07BB00627E20 /* CommunityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1303868271B07BB00627E20 /* CommunityAPI.swift */; };
+		F130386C271B0BD200627E20 /* DasidaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130386B271B0BD200627E20 /* DasidaTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4B5CA363D9907427C7751348 /* Pods_Dasida.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dasida.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E99F623D4BF3E85BFF38EC9 /* Pods-Dasida.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dasida.release.xcconfig"; path = "Target Support Files/Pods-Dasida/Pods-Dasida.release.xcconfig"; sourceTree = "<group>"; };
+		94273215B7B4B6827EB4240F /* Pods-Dasida.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dasida.debug.xcconfig"; path = "Target Support Files/Pods-Dasida/Pods-Dasida.debug.xcconfig"; sourceTree = "<group>"; };
+		F13037BD27034F4300627E20 /* Dasida.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dasida.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F13037C027034F4300627E20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F13037C227034F4300627E20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F13037C427034F4300627E20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F13037C727034F4300627E20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F13037C927034F4600627E20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F13037CC27034F4600627E20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F13037CE27034F4600627E20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F13038202705AC1000627E20 /* tableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewController.swift; sourceTree = "<group>"; };
+		F130385B2718463C00627E20 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		F130385E27195C0200627E20 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		F130386027195E9700627E20 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		F13038622719620500627E20 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		F13038652719625D00627E20 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		F1303868271B07BB00627E20 /* CommunityAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityAPI.swift; sourceTree = "<group>"; };
+		F130386B271B0BD200627E20 /* DasidaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DasidaTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F13037BA27034F4300627E20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D37BDF5FD8DA9A7FD0947056 /* Pods_Dasida.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DABBB167EAECCD62016D9FF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B5CA363D9907427C7751348 /* Pods_Dasida.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F13037B427034F4300627E20 = {
+			isa = PBXGroup;
+			children = (
+				F13037BF27034F4300627E20 /* Dasida */,
+				F13037BE27034F4300627E20 /* Products */,
+				FA0451661CEE43272D4D2B10 /* Pods */,
+				DABBB167EAECCD62016D9FF5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F13037BE27034F4300627E20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F13037BD27034F4300627E20 /* Dasida.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F13037BF27034F4300627E20 /* Dasida */ = {
+			isa = PBXGroup;
+			children = (
+				F130386A271B0BAC00627E20 /* Cell */,
+				F130385D27195B0A00627E20 /* Networking */,
+				F13037D6270354B300627E20 /* Model */,
+				F13037D5270354A100627E20 /* ViewController */,
+				F13037C027034F4300627E20 /* AppDelegate.swift */,
+				F13037C227034F4300627E20 /* SceneDelegate.swift */,
+				F13037C627034F4300627E20 /* Main.storyboard */,
+				F13037C927034F4600627E20 /* Assets.xcassets */,
+				F13037CB27034F4600627E20 /* LaunchScreen.storyboard */,
+				F13037CE27034F4600627E20 /* Info.plist */,
+			);
+			path = Dasida;
+			sourceTree = "<group>";
+		};
+		F13037D5270354A100627E20 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F13037C427034F4300627E20 /* ViewController.swift */,
+				F13038202705AC1000627E20 /* tableViewController.swift */,
+				F130385B2718463C00627E20 /* loginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F13037D6270354B300627E20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F130385D27195B0A00627E20 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F13038642719623200627E20 /* API */,
+				F130385E27195C0200627E20 /* Header.swift */,
+				F130386027195E9700627E20 /* HTTPClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F13038642719623200627E20 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F13038622719620500627E20 /* API.swift */,
+				F13038652719625D00627E20 /* AuthAPI.swift */,
+				F1303868271B07BB00627E20 /* CommunityAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F130386A271B0BAC00627E20 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F130386B271B0BD200627E20 /* DasidaTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FA0451661CEE43272D4D2B10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94273215B7B4B6827EB4240F /* Pods-Dasida.debug.xcconfig */,
+				4E99F623D4BF3E85BFF38EC9 /* Pods-Dasida.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F13037BC27034F4300627E20 /* Dasida */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F13037D127034F4600627E20 /* Build configuration list for PBXNativeTarget "Dasida" */;
+			buildPhases = (
+				738938ABBD8B49505C6BF63C /* [CP] Check Pods Manifest.lock */,
+				F13037B927034F4300627E20 /* Sources */,
+				F13037BA27034F4300627E20 /* Frameworks */,
+				F13037BB27034F4300627E20 /* Resources */,
+				5BC0D8AE2A2368A72782BC12 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dasida;
+			productName = Dasida;
+			productReference = F13037BD27034F4300627E20 /* Dasida.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F13037B527034F4300627E20 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					F13037BC27034F4300627E20 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = F13037B827034F4300627E20 /* Build configuration list for PBXProject "Dasida" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F13037B427034F4300627E20;
+			productRefGroup = F13037BE27034F4300627E20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F13037BC27034F4300627E20 /* Dasida */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F13037BB27034F4300627E20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13037CD27034F4600627E20 /* LaunchScreen.storyboard in Resources */,
+				F13037CA27034F4600627E20 /* Assets.xcassets in Resources */,
+				F13037C827034F4300627E20 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BC0D8AE2A2368A72782BC12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dasida/Pods-Dasida-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dasida/Pods-Dasida-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dasida/Pods-Dasida-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		738938ABBD8B49505C6BF63C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dasida-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F13037B927034F4300627E20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13037C527034F4300627E20 /* ViewController.swift in Sources */,
+				F13037C127034F4300627E20 /* AppDelegate.swift in Sources */,
+				F1303869271B07BB00627E20 /* CommunityAPI.swift in Sources */,
+				F130386C271B0BD200627E20 /* DasidaTableViewCell.swift in Sources */,
+				F13037C327034F4300627E20 /* SceneDelegate.swift in Sources */,
+				F130386127195E9700627E20 /* HTTPClient.swift in Sources */,
+				F13038212705AC1000627E20 /* tableViewController.swift in Sources */,
+				F130385F27195C0200627E20 /* Header.swift in Sources */,
+				F13038632719620500627E20 /* API.swift in Sources */,
+				F13038662719625D00627E20 /* AuthAPI.swift in Sources */,
+				F130385C2718463C00627E20 /* loginViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F13037C627034F4300627E20 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F13037C727034F4300627E20 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F13037CB27034F4600627E20 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F13037CC27034F4600627E20 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F13037CF27034F4600627E20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F13037D027034F4600627E20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F13037D227034F4600627E20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94273215B7B4B6827EB4240F /* Pods-Dasida.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Dasida/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sian.Dasida;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F13037D327034F4600627E20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E99F623D4BF3E85BFF38EC9 /* Pods-Dasida.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Dasida/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sian.Dasida;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F13037B827034F4300627E20 /* Build configuration list for PBXProject "Dasida" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F13037CF27034F4600627E20 /* Debug */,
+				F13037D027034F4600627E20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F13037D127034F4600627E20 /* Build configuration list for PBXNativeTarget "Dasida" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F13037D227034F4600627E20 /* Debug */,
+				F13037D327034F4600627E20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F13037B527034F4300627E20 /* Project object */;
+}
