@@ -21,6 +21,17 @@ struct Token {
         }
     }
     
+    static var _refreshToken: String?
+    static var refreshToken: String? {
+        get {
+            _refreshToken = UserDefaults.standard.string(forKey: "refreshToken")
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "refreshToken")
+            _refreshToken = UserDefaults.standard.string(forKey: "refreshToken")
+        }
+    }
+    
     static func tokenRemove() {
         token = nil
     }

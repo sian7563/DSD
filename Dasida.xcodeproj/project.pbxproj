@@ -22,6 +22,7 @@
 		F13038662719625D00627E20 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13038652719625D00627E20 /* AuthAPI.swift */; };
 		F1303869271B07BB00627E20 /* CommunityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1303868271B07BB00627E20 /* CommunityAPI.swift */; };
 		F130386C271B0BD200627E20 /* DasidaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130386B271B0BD200627E20 /* DasidaTableViewCell.swift */; };
+		F130386E271C4BC600627E20 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130386D271C4BC600627E20 /* TokenModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F13038652719625D00627E20 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		F1303868271B07BB00627E20 /* CommunityAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityAPI.swift; sourceTree = "<group>"; };
 		F130386B271B0BD200627E20 /* DasidaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DasidaTableViewCell.swift; sourceTree = "<group>"; };
+		F130386D271C4BC600627E20 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		F13037D6270354B300627E20 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F130386D271C4BC600627E20 /* TokenModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F13037C527034F4300627E20 /* ViewController.swift in Sources */,
+				F130386E271C4BC600627E20 /* TokenModel.swift in Sources */,
 				F13037C127034F4300627E20 /* AppDelegate.swift in Sources */,
 				F1303869271B07BB00627E20 /* CommunityAPI.swift in Sources */,
 				F130386C271B0BD200627E20 /* DasidaTableViewCell.swift in Sources */,

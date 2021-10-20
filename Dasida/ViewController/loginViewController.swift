@@ -17,25 +17,50 @@ class loginViewController: UIViewController {
 
     }
     
-    @IBAction func signin(_ sender: Any) {
-        let Username = username.text
-        let Password = password.text
-        
-        if(Username == "" || Password == "")
-        {
-            return
-        }
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
-    @IBAction func signup(_ sender: Any) {
+    @IBAction private func signin(_ sender: Any) {
+        signIn(id: username.text!, password: password.text!)
+    }
+    
+    @IBAction private func signup(_ sender: Any) {
         
         guard let uvc = self.storyboard?.instantiateViewController(withIdentifier: "SecondVC") else {
             return
         }
         
-        uvc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        uvc.modalTransitionStyle = .coverVertical
              
         self.present(uvc, animated: true)
+    }
+    
+    private func signIn(id: String, password: String) {
+        HTTPClient().post(url: AuthAPI.signin.path(), params: ["id" : id, "password" : password], header: Header.tokenIsEmpty.header()).responseJSON(completionHandler: { res in
+            switch res.response?.statusCode {
+            case 201 :
+                do {
+                    print("okay")
+                    let model = try JSONDecoder().decode(TokenModel.self, from: res.data!)
+                    
+                    Token.token = model.access_token
+                    Token.refreshToken = model.refresh_token
+                    
+                    guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "community") else {return}
+                    
+                    self.navigationController?.pushViewController(vc, animated:  true)
+                }
+                catch {
+                    print(error)
+                }
+                
+            case 404:
+                print("아이디나 비밀번호를 찾을 수 없습니다.")
+            case 409:
+                print("바디 요청이 잘못되었습니다.")
+            default:
+                print(res.response?.statusCode ?? 0)
+            }})
     }
 }
