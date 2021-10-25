@@ -25,6 +25,7 @@ struct Token {
     static var refreshToken: String? {
         get {
             _refreshToken = UserDefaults.standard.string(forKey: "refreshToken")
+            return _refreshToken
         }
         set {
             UserDefaults.standard.setValue(newValue, forKey: "refreshToken")

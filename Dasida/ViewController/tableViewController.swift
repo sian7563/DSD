@@ -19,7 +19,9 @@ class tableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FirstCell", for: indexPath)
+        cell.textLabel?.text = "\(indexPath.row)"
+        return cell
     }
 
         override func viewDidLoad() {
@@ -28,8 +30,6 @@ class tableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             tableView.dataSource = self
             // Do any additional setup after loading the view.
         }
-
-
         /*
          // MARK: - Navigation
 

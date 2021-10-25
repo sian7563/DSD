@@ -8,7 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController,  UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
-    
+    @IBOutlet weak var exitBtn: UIBarButtonItem!
+    @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak private var weather: UITextField!
     @IBOutlet weak private var pickerView: UIPickerView!
 
