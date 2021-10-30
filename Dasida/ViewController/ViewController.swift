@@ -8,8 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController,  UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
-    @IBOutlet weak var exitBtn: UIBarButtonItem!
-    @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak private var weather: UITextField!
     @IBOutlet weak private var pickerView: UIPickerView!
 
@@ -21,11 +19,11 @@ class ViewController: UIViewController,  UITextFieldDelegate, UIPickerViewDelega
         weather.tintColor = .clear
         createPickerView()
         dismissPickerView()
-        
-//        pickerView.delegate = self
-//        pickerView.dataSource = self
-
         // Do any additional setup after loading the view.
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -47,7 +45,6 @@ class ViewController: UIViewController,  UITextFieldDelegate, UIPickerViewDelega
             weather.text = pickerData[row]
         }
 
-
         func createPickerView() {
             let pickerView = UIPickerView()
             pickerView.delegate = self
@@ -57,13 +54,13 @@ class ViewController: UIViewController,  UITextFieldDelegate, UIPickerViewDelega
         func dismissPickerView() {
             let toolBar = UIToolbar()
             toolBar.sizeToFit()
-            let button = UIBarButtonItem(title: "선택", style: .plain, target: self, action: #selector(self.action))
+            let button = UIBarButtonItem(title: "exit", style: .plain, target: self, action: #selector(self.action))
             toolBar.setItems([button], animated: true)
             toolBar.isUserInteractionEnabled = true
             weather.inputAccessoryView = toolBar
         }
     
-    @objc func action() {
+    @objc private func action() {
         print("!!")
     }
 }

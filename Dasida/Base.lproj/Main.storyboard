@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xPq-L9-k2k">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u4a-q4-vrh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="loginViewController" customModule="Dasida" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signin" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Dasida" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,7 +49,7 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="signin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VqG-6g-4rp"/>
@@ -65,7 +65,7 @@
                                         <fragment content="sign up">
                                             <attributes>
                                                 <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="14" name="Helvetica"/>
+                                                <font key="NSFont" size="14" name="Helvetica-Oblique"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="-13.043478260869566" y="-1.3392857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="koC-XU-fNc">
             <objects>
-                <viewController storyboardIdentifier="community" id="u4a-q4-vrh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="community" id="u4a-q4-vrh" customClass="tableViewController" customModule="Dasida" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y3d-xe-dET">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,6 +126,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="y3d-xe-dET" id="eqN-fG-MUA"/>
+                                    <outlet property="delegate" destination="y3d-xe-dET" id="5fg-h7-Osh"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i1F-bV-t4P"/>
@@ -137,6 +141,21 @@
             <point key="canvasLocation" x="-13.043478260869566" y="639.50892857142856"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="Xpo-OZ-TrI">
+            <objects>
+                <viewController id="uXH-26-NPI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xg2-f0-ccp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="8ye-VM-yxO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uyv-xY-d5s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="1278"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="Hfq-Zt-AYH">
             <objects>
                 <viewController id="xPq-L9-k2k" customClass="ViewController" customModule="Dasida" customModuleProvider="target" sceneMemberID="viewController">
@@ -144,31 +163,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbh-eJ-UaV">
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbh-eJ-UaV">
                                 <rect key="frame" x="0.0" y="700" width="414" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gWJ-fm-2Qq">
-                                <rect key="frame" x="0.0" y="656" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="exit" id="zGN-8b-PAt"/>
-                                </items>
-                            </toolbar>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LI1-ox-PII">
-                                <rect key="frame" x="20" y="44" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LI1-ox-PII">
+                                <rect key="frame" x="20" y="44" width="100" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-yY-ZFL">
+                                <rect key="frame" x="20" y="86" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="brc-5J-Bo0">
+                                <rect key="frame" x="20" y="128" width="374" height="734"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sCw-xK-Ohc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="exitBtn" destination="zGN-8b-PAt" id="40L-na-kw2"/>
                         <outlet property="pickerView" destination="xbh-eJ-UaV" id="Mpe-Av-dQg"/>
-                        <outlet property="toolbar" destination="gWJ-fm-2Qq" id="crL-81-PWM"/>
                         <outlet property="weather" destination="LI1-ox-PII" id="Ygk-ML-bWa"/>
                     </connections>
                 </viewController>
@@ -176,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="714.49275362318849" y="639.50892857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="u18-9e-5OX">
             <objects>
-                <viewController storyboardIdentifier="SecondVC" id="0Pi-n9-vL4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondVC" id="0Pi-n9-vL4" customClass="SignupViewController" customModule="Dasida" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bIm-M4-tKk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -210,32 +234,55 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="회원가입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2T-MP-P6x">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2T-MP-P6x">
                                 <rect key="frame" x="53" y="391" width="59" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebY-KU-JMA">
-                                <rect key="frame" x="167" y="660" width="83" height="35"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CfB-05-0mB">
+                                <rect key="frame" x="120" y="442" width="259" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbT-76-Fqh">
+                                <rect key="frame" x="67" y="449" width="30" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebY-KU-JMA">
+                                <rect key="frame" x="53" y="648" width="326" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
                                         <fragment content="sign up">
                                             <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <font key="NSFont" size="18" name="Helvetica"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="SignupBtn:" destination="0Pi-n9-vL4" eventType="touchUpInside" id="hxi-gV-ied"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TDq-PA-68m"/>
                         <color key="backgroundColor" red="0.81656923169999995" green="0.90684519480000003" blue="0.93019088270000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="name" destination="CfB-05-0mB" id="xDV-Fe-MHJ"/>
+                        <outlet property="password" destination="I4e-AN-Xd8" id="3dz-4k-gXL"/>
+                        <outlet property="username" destination="o0X-mT-ybe" id="YPf-7l-1bD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rMP-JS-pTm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -243,6 +290,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

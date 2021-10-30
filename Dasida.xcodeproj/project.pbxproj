@@ -15,7 +15,7 @@
 		F13037CA27034F4600627E20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13037C927034F4600627E20 /* Assets.xcassets */; };
 		F13037CD27034F4600627E20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13037CB27034F4600627E20 /* LaunchScreen.storyboard */; };
 		F13038212705AC1000627E20 /* tableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13038202705AC1000627E20 /* tableViewController.swift */; };
-		F130385C2718463C00627E20 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130385B2718463C00627E20 /* loginViewController.swift */; };
+		F130385C2718463C00627E20 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130385B2718463C00627E20 /* LoginViewController.swift */; };
 		F130385F27195C0200627E20 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130385E27195C0200627E20 /* Header.swift */; };
 		F130386127195E9700627E20 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130386027195E9700627E20 /* HTTPClient.swift */; };
 		F13038632719620500627E20 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13038622719620500627E20 /* API.swift */; };
@@ -23,6 +23,7 @@
 		F1303869271B07BB00627E20 /* CommunityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1303868271B07BB00627E20 /* CommunityAPI.swift */; };
 		F130386C271B0BD200627E20 /* DasidaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130386B271B0BD200627E20 /* DasidaTableViewCell.swift */; };
 		F130386E271C4BC600627E20 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130386D271C4BC600627E20 /* TokenModel.swift */; };
+		F13038D72728141E00627E20 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13038D62728141E00627E20 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +39,7 @@
 		F13037CC27034F4600627E20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F13037CE27034F4600627E20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F13038202705AC1000627E20 /* tableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewController.swift; sourceTree = "<group>"; };
-		F130385B2718463C00627E20 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		F130385B2718463C00627E20 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F130385E27195C0200627E20 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		F130386027195E9700627E20 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		F13038622719620500627E20 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -46,6 +47,7 @@
 		F1303868271B07BB00627E20 /* CommunityAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityAPI.swift; sourceTree = "<group>"; };
 		F130386B271B0BD200627E20 /* DasidaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DasidaTableViewCell.swift; sourceTree = "<group>"; };
 		F130386D271C4BC600627E20 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
+		F13038D62728141E00627E20 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +110,8 @@
 			children = (
 				F13037C427034F4300627E20 /* ViewController.swift */,
 				F13038202705AC1000627E20 /* tableViewController.swift */,
-				F130385B2718463C00627E20 /* loginViewController.swift */,
+				F130385B2718463C00627E20 /* LoginViewController.swift */,
+				F13038D62728141E00627E20 /* SignupViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -282,9 +285,10 @@
 				F130386127195E9700627E20 /* HTTPClient.swift in Sources */,
 				F13038212705AC1000627E20 /* tableViewController.swift in Sources */,
 				F130385F27195C0200627E20 /* Header.swift in Sources */,
+				F13038D72728141E00627E20 /* SignupViewController.swift in Sources */,
 				F13038632719620500627E20 /* API.swift in Sources */,
 				F13038662719625D00627E20 /* AuthAPI.swift in Sources */,
-				F130385C2718463C00627E20 /* loginViewController.swift in Sources */,
+				F130385C2718463C00627E20 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

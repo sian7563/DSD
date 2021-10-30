@@ -13,7 +13,7 @@ class tableViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBOutlet weak private var tableView: UITableView!
     @IBOutlet weak private var tableViewCell : UITableViewCell!
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -26,10 +26,10 @@ class tableViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         override func viewDidLoad() {
             super.viewDidLoad()
-            tableView.delegate = self
-            tableView.dataSource = self
+            
             // Do any additional setup after loading the view.
         }
+    
         /*
          // MARK: - Navigation
 
