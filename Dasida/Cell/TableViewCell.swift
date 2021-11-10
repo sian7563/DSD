@@ -1,16 +1,19 @@
 //
-//  DasidaTableViewCell.swift
+//  TableViewCell.swift
 //  Dasida
 //
-//  Created by kimsian on 2021/10/16.
+//  Created by kimsian on 2021/11/09.
 //
 
 import UIKit
 
-class DasidaTableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
 
+    @IBOutlet weak var listLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        listLabel.sizeToFit()
         // Initialization code
     }
 
@@ -19,5 +22,5 @@ class DasidaTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

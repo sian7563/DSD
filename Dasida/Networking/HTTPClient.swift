@@ -17,7 +17,7 @@ protocol HTTPClientProvider {
 
 class HTTPClient: HTTPClientProvider {
     
-    let baseURL = ""
+    let baseURL = "http://13.209.87.43:5000/post"
     
     func get(url: String, params: Parameters?, header: HTTPHeaders) -> DataRequest {
         return AF.request(baseURL + url,

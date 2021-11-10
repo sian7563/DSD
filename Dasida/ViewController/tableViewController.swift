@@ -7,37 +7,38 @@
 
 import UIKit
 
-class tableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class tableViewController: UIViewController{
     
     private let arr = ["김시안", "김기영", "정대현"]
 
     @IBOutlet weak private var tableView: UITableView!
-    @IBOutlet weak private var tableViewCell : UITableViewCell!
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FirstCell", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row)"
-        return cell
-    }
-
         override func viewDidLoad() {
             super.viewDidLoad()
             
+            tableView.delegate = self
+            tableView.dataSource = self
+            
+            let nibName = UINib(nibName: "TableViewCell", bundle: nil)
+
+            tableView.register(nibName, forCellReuseIdentifier: "FirstCell")
+
             // Do any additional setup after loading the view.
         }
     
-        /*
-         // MARK: - Navigation
-
-         // In a storyboard-based application, you will often want to do a little preparation before navigation
-         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-         }
-         */
-
     }
+
+extension tableViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arr.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FirstCell", for: indexPath) as! TableViewCell
+        cell.listLabel?.text = arr[indexPath.row]
+        return cell
+    }
+    
+    
+}
