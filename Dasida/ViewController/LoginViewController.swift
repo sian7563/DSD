@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
         
         uvc.modalTransitionStyle = .coverVertical
              
-        self.present(uvc, animated: true)
+        self.navigationController?.pushViewController(uvc, animated: true)
     }
     
     private func signIn(id: String, password: String) {
@@ -47,7 +47,8 @@ class LoginViewController: UIViewController {
                     Token.token = model.access_token
                     Token.refreshToken = model.refresh_token
                     
-                    guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "community") else {return}
+                    guard let vc = self.storyboard?
+                            .instantiateViewController(withIdentifier: "community") else {return}
                     
                     self.navigationController?.pushViewController(vc, animated:  true)
                 }

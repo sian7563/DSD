@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController,  UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak private var weather: UITextField!
     @IBOutlet weak private var pickerView: UIPickerView!
+    @IBOutlet weak private var titleTxt: UITextField!
+    @IBOutlet weak private var contentTxtView: UITextView!
 
     let pickerData = ["sunny" , "cloud" , "rain"]
 
@@ -20,6 +22,10 @@ class ViewController: UIViewController,  UITextFieldDelegate, UIPickerViewDelega
         createPickerView()
         dismissPickerView()
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func saveBtn(_ sender: Any) {
+        addPost(title: titleTxt.text!, content: contentTxtView.text!)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -62,6 +68,21 @@ class ViewController: UIViewController,  UITextFieldDelegate, UIPickerViewDelega
     
     @objc private func action() {
         print("!!")
+    }
+    
+    private func addPost(title: String, content: String) {
+        HTTPClient().post(url: CommunityAPI.write.path(), params: ["title": title, "content": content], header: Header.token.header()).responseData(completionHandler: { res in
+            switch res.response?.statusCode {
+            case 201 :
+                self.navigationController?.popViewController(animated:  true)
+            case 401 :
+                print("토큰 오류.")
+            case 409 :
+                print("body 요청이 잘못됨.")
+            default :
+                print(res.response?.statusCode ?? 0)
+            }
+        })
     }
 }
 

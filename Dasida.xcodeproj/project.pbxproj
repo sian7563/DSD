@@ -14,7 +14,7 @@
 		F13037C827034F4300627E20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13037C627034F4300627E20 /* Main.storyboard */; };
 		F13037CA27034F4600627E20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13037C927034F4600627E20 /* Assets.xcassets */; };
 		F13037CD27034F4600627E20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13037CB27034F4600627E20 /* LaunchScreen.storyboard */; };
-		F13038212705AC1000627E20 /* tableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13038202705AC1000627E20 /* tableViewController.swift */; };
+		F13038212705AC1000627E20 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13038202705AC1000627E20 /* TableViewController.swift */; };
 		F130385C2718463C00627E20 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130385B2718463C00627E20 /* LoginViewController.swift */; };
 		F130385F27195C0200627E20 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130385E27195C0200627E20 /* Header.swift */; };
 		F130386127195E9700627E20 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130386027195E9700627E20 /* HTTPClient.swift */; };
@@ -25,6 +25,7 @@
 		F13038D72728141E00627E20 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13038D62728141E00627E20 /* SignupViewController.swift */; };
 		F13039A1273A650E00627E20 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130399F273A650E00627E20 /* TableViewCell.swift */; };
 		F13039A2273A650E00627E20 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F13039A0273A650E00627E20 /* TableViewCell.xib */; };
+		F13039FD273D230C00627E20 /* CommunityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13039FC273D230C00627E20 /* CommunityModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +40,7 @@
 		F13037C927034F4600627E20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F13037CC27034F4600627E20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F13037CE27034F4600627E20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F13038202705AC1000627E20 /* tableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewController.swift; sourceTree = "<group>"; };
+		F13038202705AC1000627E20 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		F130385B2718463C00627E20 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F130385E27195C0200627E20 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		F130386027195E9700627E20 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -50,6 +51,7 @@
 		F13038D62728141E00627E20 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		F130399F273A650E00627E20 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F13039A0273A650E00627E20 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		F13039FC273D230C00627E20 /* CommunityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				F13037C427034F4300627E20 /* ViewController.swift */,
-				F13038202705AC1000627E20 /* tableViewController.swift */,
+				F13038202705AC1000627E20 /* TableViewController.swift */,
 				F130385B2718463C00627E20 /* LoginViewController.swift */,
 				F13038D62728141E00627E20 /* SignupViewController.swift */,
 			);
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				F130386D271C4BC600627E20 /* TokenModel.swift */,
+				F13039FC273D230C00627E20 /* CommunityModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,7 +290,8 @@
 				F1303869271B07BB00627E20 /* CommunityAPI.swift in Sources */,
 				F13037C327034F4300627E20 /* SceneDelegate.swift in Sources */,
 				F130386127195E9700627E20 /* HTTPClient.swift in Sources */,
-				F13038212705AC1000627E20 /* tableViewController.swift in Sources */,
+				F13039FD273D230C00627E20 /* CommunityModel.swift in Sources */,
+				F13038212705AC1000627E20 /* TableViewController.swift in Sources */,
 				F130385F27195C0200627E20 /* Header.swift in Sources */,
 				F13038D72728141E00627E20 /* SignupViewController.swift in Sources */,
 				F13038632719620500627E20 /* API.swift in Sources */,

@@ -7,13 +7,14 @@
 
 import UIKit
 
-class tableViewController: UIViewController{
+class TableViewController: UIViewController{
+    
     
     private let arr = ["김시안", "김기영", "정대현"]
 
     @IBOutlet weak private var tableView: UITableView!
     
-        override func viewDidLoad() {
+    override func viewDidLoad() {
             super.viewDidLoad()
             
             tableView.delegate = self
@@ -23,12 +24,20 @@ class tableViewController: UIViewController{
 
             tableView.register(nibName, forCellReuseIdentifier: "FirstCell")
 
+
             // Do any additional setup after loading the view.
         }
     
+    
+    @IBAction func movePostVC(_ sender: Any) {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "post") else {return}
+        
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
     }
 
-extension tableViewController: UITableViewDelegate, UITableViewDataSource {
+extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arr.count
