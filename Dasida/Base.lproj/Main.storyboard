@@ -93,7 +93,6 @@
         <!--Diary-->
         <scene sceneID="koC-XU-fNc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5GB-px-Jcg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="community" modalPresentationStyle="fullScreen" id="u4a-q4-vrh" customClass="TableViewController" customModule="Dasida" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y3d-xe-dET">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -121,6 +120,7 @@
                         <outlet property="tableView" destination="Jpu-LR-WJJ" id="LGr-tG-SYA"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5GB-px-Jcg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="897.10144927536237" y="664.95535714285711"/>
         </scene>

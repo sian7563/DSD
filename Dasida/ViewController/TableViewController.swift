@@ -10,7 +10,8 @@ import UIKit
 class TableViewController: UIViewController{
     
     
-    private let arr = ["김시안", "김기영", "정대현"]
+    private var communityModel: posts()
+    private var posts = [CommunityModel]()
 
     @IBOutlet weak private var tableView: UITableView!
     
@@ -40,14 +41,16 @@ class TableViewController: UIViewController{
 extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arr.count
+        return communityModel.posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FirstCell", for: indexPath) as! TableViewCell
-        cell.listLabel?.text = arr[indexPath.row]
+        cell.listLabel?.text = communityModel.posts[indexPath.row].title
+        communityModel.posts[indexPath.row]
         return cell
     }
+    
     
     
 }
