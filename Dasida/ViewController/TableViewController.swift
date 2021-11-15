@@ -10,7 +10,7 @@ import UIKit
 class TableViewController: UIViewController{
     
     
-    private var communityModel: posts()
+    private var communityModel = CommmunityList()
     private var posts = [CommunityModel]()
 
     @IBOutlet weak private var tableView: UITableView!
@@ -28,8 +28,7 @@ class TableViewController: UIViewController{
 
             // Do any additional setup after loading the view.
         }
-    
-    
+
     @IBAction func movePostVC(_ sender: Any) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "post") else {return}
         
@@ -50,7 +49,18 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
         communityModel.posts[indexPath.row]
         return cell
     }
-    
-    
-    
+    private func getList(id_pk: Int, name: String, title: String, content: String) {
+        HTTPClient().get(url: CommunityAPI.write.path(), params: ["id_pk": id_pk, "name": name, "title": title, "content": content], header: Header.token.header()).responseData(completionHandler: { res in
+            switch res.response?.statusCode {
+            case 200 :
+                self.navigationController?.popViewController(animated:  true)
+            case 401 :
+                print("토큰 오류.")
+            case 404 :
+                print("글을 찾지 못함.")
+            default :
+                print(res.response?.statusCode ?? 0)
+            }
+        })
+    }
 }

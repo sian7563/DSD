@@ -21,6 +21,6 @@ struct CommunityModel : Codable {
     }
 }
 
-struct posts: Codable {
+struct CommmunityList: Codable {
     var posts = [CommunityModel]()
 }
