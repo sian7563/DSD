@@ -17,10 +17,6 @@ class TableViewController: UIViewController{
     
     override func viewDidLoad() {
             super.viewDidLoad()
-            
-            tableView.delegate = self
-            tableView.dataSource = self
-            
             let nibName = UINib(nibName: "TableViewCell", bundle: nil)
 
             tableView.register(nibName, forCellReuseIdentifier: "FirstCell")
@@ -35,7 +31,35 @@ class TableViewController: UIViewController{
         self.navigationController?.pushViewController(vc, animated: false)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.getList()
     }
+    
+    
+    private func getList() {
+        HTTPClient().get(url: CommunityAPI.watch.path(), params: nil,
+                         header: Header.token.header()).responseJSON { [unowned self] res in
+            switch res.response?.statusCode {
+            case 200 :
+                do {
+                let model = try JSONDecoder().decode(CommmunityList.self, from: res.data!)
+                communityModel.posts.removeAll()
+                communityModel.posts.append(contentsOf: model.posts)
+                tableView.reloadData()
+                }
+                catch {
+                    print(error)
+                }
+            case 401 :
+                print("토큰 오류.")
+            case 404 :
+                print("글을 찾지 못함.")
+            default :
+                print(res.response?.statusCode ?? 0)
+            }
+        }
+    }
+}
 
 extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -49,18 +73,15 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
         communityModel.posts[indexPath.row]
         return cell
     }
-    private func getList(id_pk: Int, name: String, title: String, content: String) {
-        HTTPClient().get(url: CommunityAPI.write.path(), params: ["id_pk": id_pk, "name": name, "title": title, "content": content], header: Header.token.header()).responseData(completionHandler: { res in
-            switch res.response?.statusCode {
-            case 200 :
-                self.navigationController?.popViewController(animated:  true)
-            case 401 :
-                print("토큰 오류.")
-            case 404 :
-                print("글을 찾지 못함.")
-            default :
-                print(res.response?.statusCode ?? 0)
-            }
-        })
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let commentVC = storyboard?.instantiateViewController(withIdentifier: "CommentVC") as? CommentViewController else {return}
+        
+        commentVC.postTitle = communityModel.posts[indexPath.row].title
+        commentVC.content = communityModel.posts[indexPath.row].content
+        commentVC.id = communityModel.posts[indexPath.row].id_pk
+        
+        navigationController?.pushViewController(commentVC, animated: true)
     }
+    
 }

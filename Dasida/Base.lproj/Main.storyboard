@@ -103,6 +103,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="u4a-q4-vrh" id="fik-uL-Xde"/>
+                                    <outlet property="delegate" destination="u4a-q4-vrh" id="0xt-bq-WEv"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i1F-bV-t4P"/>
@@ -124,22 +128,55 @@
             </objects>
             <point key="canvasLocation" x="897.10144927536237" y="664.95535714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--Comment View Controller-->
         <scene sceneID="Xpo-OZ-TrI">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="uXH-26-NPI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentVC" modalPresentationStyle="fullScreen" id="uXH-26-NPI" customClass="CommentViewController" customModule="Dasida" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xg2-f0-ccp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSO-cv-MHs">
+                                <rect key="frame" x="186" y="171" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQA-Wu-F6j">
+                                <rect key="frame" x="186" y="281" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeM-9E-rcl">
+                                <rect key="frame" x="0.0" y="76" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="5RC-cw-6j8">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="GQP-Hr-y2F">
+                                            <connections>
+                                                <action selector="deleteBtn:" destination="uXH-26-NPI" id="BuT-Kj-BMl"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8ye-VM-yxO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="diaryTitle" destination="nSO-cv-MHs" id="Snd-4D-BYy"/>
+                        <outlet property="postContent" destination="GQA-Wu-F6j" id="QDd-sX-dRj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uyv-xY-d5s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13" y="1361"/>
+            <point key="canvasLocation" x="1301" y="1309"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hfq-Zt-AYH">
@@ -299,6 +336,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TrY-40-dQY">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iWh-QW-GAm"/>
                     </connections>

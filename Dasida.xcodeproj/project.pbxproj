@@ -26,6 +26,7 @@
 		F13039A1273A650E00627E20 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130399F273A650E00627E20 /* TableViewCell.swift */; };
 		F13039A2273A650E00627E20 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F13039A0273A650E00627E20 /* TableViewCell.xib */; };
 		F13039FD273D230C00627E20 /* CommunityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13039FC273D230C00627E20 /* CommunityModel.swift */; };
+		F1963A0B27453E9000FA9428 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1963A0A27453E9000FA9428 /* CommentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		F130399F273A650E00627E20 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F13039A0273A650E00627E20 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		F13039FC273D230C00627E20 /* CommunityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityModel.swift; sourceTree = "<group>"; };
+		F1963A0A27453E9000FA9428 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				F13038202705AC1000627E20 /* TableViewController.swift */,
 				F130385B2718463C00627E20 /* LoginViewController.swift */,
 				F13038D62728141E00627E20 /* SignupViewController.swift */,
+				F1963A0A27453E9000FA9428 /* CommentViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				F130386E271C4BC600627E20 /* TokenModel.swift in Sources */,
 				F13037C127034F4300627E20 /* AppDelegate.swift in Sources */,
 				F1303869271B07BB00627E20 /* CommunityAPI.swift in Sources */,
+				F1963A0B27453E9000FA9428 /* CommentViewController.swift in Sources */,
 				F13037C327034F4300627E20 /* SceneDelegate.swift in Sources */,
 				F130386127195E9700627E20 /* HTTPClient.swift in Sources */,
 				F13039FD273D230C00627E20 /* CommunityModel.swift in Sources */,
