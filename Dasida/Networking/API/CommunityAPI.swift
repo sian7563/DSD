@@ -15,7 +15,7 @@ enum CommunityAPI: API {
         case .write, .watch, .edit:
             return "/post"
         case .delete(let id):
-            return "/post/<\(id)>"
+            return "/post/\(id)"
         }
     }
     

@@ -38,7 +38,7 @@ class CommentViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
         alert.addAction(defaultAction)
         alert.addAction(cancelAction)
-        
+
         // present(alert, animated: false, completion: nil)
         
         present(alert, animated: false) {

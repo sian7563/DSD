@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="897.10144927536237" y="-1.3392857142857142"/>
+            <point key="canvasLocation" x="897" y="-1"/>
         </scene>
         <!--Diary-->
         <scene sceneID="koC-XU-fNc">
@@ -126,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5GB-px-Jcg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="897.10144927536237" y="664.95535714285711"/>
+            <point key="canvasLocation" x="896" y="665"/>
         </scene>
         <!--Comment View Controller-->
         <scene sceneID="Xpo-OZ-TrI">
@@ -176,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uyv-xY-d5s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1301" y="1309"/>
+            <point key="canvasLocation" x="1622" y="1339"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hfq-Zt-AYH">
@@ -236,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZK-pH-Pxf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1621.7391304347827" y="664.95535714285711"/>
+            <point key="canvasLocation" x="1623" y="665"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="u18-9e-5OX">
@@ -345,7 +345,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JqG-BW-8vA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13.043478260869566" y="-1.3392857142857142"/>
+            <point key="canvasLocation" x="149" y="-1"/>
         </scene>
     </scenes>
     <resources>
