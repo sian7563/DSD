@@ -67,7 +67,7 @@ class ViewController: UIViewController,  UITextFieldDelegate, UIPickerViewDelega
         }
     
     @objc private func action() {
-        print("!!")
+        view.endEditing(true)
     }
     
     private func addPost(title: String, content: String) {

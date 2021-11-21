@@ -39,12 +39,8 @@ class CommentViewController: UIViewController {
         alert.addAction(defaultAction)
         alert.addAction(cancelAction)
 
-        // present(alert, animated: false, completion: nil)
         
-        present(alert, animated: false) {
-
-        }
-        delete(id)
+        present(alert, animated: false)
     }
     
     private func delete(_ id: Int) {
@@ -53,7 +49,7 @@ class CommentViewController: UIViewController {
             case 200 :
                 self.navigationController?.popViewController(animated: true)
             default :
-                print(res.response?.statusCode ?? 0)
+                print(res.response?.statusCode)
             }
         })
     }
